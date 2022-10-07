@@ -8,7 +8,7 @@ data:
   aws_bucket: "cloud-dev-s3"
   aws_region: "us-east-1"
   aws_profile: "default"
-  url:
+  url: "https://ECD49B1A0DD9A815824270FD71145A39.gr7.us-east-2.eks.amazonaws.com"
   jwt_secret: "testing"
 
 
