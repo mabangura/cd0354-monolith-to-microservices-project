@@ -1,5 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-configmap
+data:
+  postgres_host: database-1.crttnlui3p8l.us-east-1.rds.amazonaws.com
+  postgres_db: "postgres"
+  aws_bucket: "cloud-dev-s3"
+  aws_region: "us-east-1"
+  aws_profile: "default"
+  url:
+  jwt_secret: "testing"
 
-export POSTGRES_HOST=database-1.crttnlui3p8l.us-east-1.rds.amazonaws.com
+
+
+
+
+
+export POSTGRES_HOST=
 export POSTGRES_DB=postgres
 export AWS_BUCKET=cloud-dev-s3
 export AWS_REGION=us-east-1
