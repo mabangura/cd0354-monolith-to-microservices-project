@@ -8,31 +8,31 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: feeds-app
+      app: udagram-api-feed
   template:
     metadata:
       labels:
-        app: feeds-app
+        app: udagram-api-feed
     spec:
       containers:
-      - name: restapi-feeds
-        image: adiazarroyo/restapi-feeds
+      - name: udagram-api-feed
+        image: mabangura/udagram-api-feed
         ports:
         - containerPort: 80
         env:
         - name: POSTGRESS_USERNAME
-          value: "udacityadiaz"
+          value: "postgres"
         - name: POSTGRESS_PASSWORD
-          value: "berlin22"
+          value: "Zara2012"
         - name: POSTGRESS_DATABASE
-          value: "udagram"
+          value: "postgres"
         - name: POSTGRESS_HOST
-          value: "udacityadiaz.cjvquh78n3mk.eu-west-3.rds.amazonaws.com"
+          value: "database-1.crttnlui3p8l.us-east-1.rds.amazonaws.com"
         - name: AWS_REGION
-          value: "eu-west-3"
+          value: "us-east-1"
         - name: AWS_PROFILE
           value: "default"
         - name: AWS_MEDIA_BUCKET
-          value: "udagram-adiaz-dev"
+          value: "cloud-dev-s3"
         - name: JWT_SECRET
-          value: "FJAEKFJLKSJEAKEKAJFFAIQOE"
+          value: "testing"

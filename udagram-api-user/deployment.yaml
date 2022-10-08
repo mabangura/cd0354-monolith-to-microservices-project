@@ -1,38 +1,39 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: users-app
+  name: udagram-api-user
   labels:
-    app: users-app
+    app: udagram-api-user
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: users-app
+      app: udagram-api-user
   template:
     metadata:
       labels:
-        app: users-app
+        app: udagram-api-user
     spec:
       containers:
-      - name: restapi-users
-        image: adiazarroyo/restapi-users
+      - name: udagram-api-user
+        image: mabangura/udagram-api-user
         ports:
         - containerPort: 80
+        
         env:
         - name: POSTGRESS_USERNAME
-          value: "udacityadiaz"
+          value: "postgres"
         - name: POSTGRESS_PASSWORD
-          value: "berlin22"
+          value: "Zara2012"
         - name: POSTGRESS_DATABASE
-          value: "udagram"
+          value: "postgres"
         - name: POSTGRESS_HOST
-          value: "udacityadiaz.cjvquh78n3mk.eu-west-3.rds.amazonaws.com"
+          value: "database-1.crttnlui3p8l.us-east-1.rds.amazonaws.com"
         - name: AWS_REGION
-          value: "eu-west-3"
+          value: "us-east-1"
         - name: AWS_PROFILE
           value: "default"
         - name: AWS_MEDIA_BUCKET
-          value: "udagram-adiaz-dev"
+          value: "cloud-dev-s3"
         - name: JWT_SECRET
-          value: "FJAEKFJLKSJEAKEKAJFFAIQOE"
+          value: "testing"
